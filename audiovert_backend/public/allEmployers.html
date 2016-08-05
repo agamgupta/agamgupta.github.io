@@ -1,0 +1,57 @@
+<!doctype html>
+<html ng-app = "employerApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Optimize mobile viewport -->
+
+	<title>All employers page</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	 load bootstrap -->
+	<style>
+		html                    { overflow-y:scroll; }
+	</style>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script><!-- load angular -->
+	<script src ="../js/core.js"></script> 
+	<script src ="../js/controllers/main.js"></script> <!-- Load up our controller -->
+	<script src ="../js/services/service.js"></script>
+</head>
+<body ng-controller = "mainController">
+	<!-- The search bar -->
+	<div class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<div class="col-sm-3 col-md-3 pull-right">
+		        <form class="navbar-form" role="search">
+		        	<div class="input-group">
+		           		<input type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
+			            <div class="input-group-btn">
+			                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+			            </div>
+		    	    </div>
+		        </form>
+        	</div>
+	    </div>
+	</div>
+	<!-- The list of all objects i.e all employers in the database-->
+	<h1> My name is Name: {{ employerx }} </h1>
+    <div class="list-group" ng-repeat = "jobprovider in employerList"> <!--could use ng-repeat = employer in employers here and within the li tag we can display the properties of an employer -->
+  		<button type="button" class="list-group-item">
+    		<p class="list-group-item-text">Name: {{ jobprovider.name }} </p>
+			<p class="list-group-item-text">Company: {{ jobprovider.company }} </p>
+    	</button>
+    	<!-- 
+ 		<button type="button" class="list-group-item">
+    		<p class="list-group-item-text">Name: Employer 'i' </p>
+			<p class="list-group-item-text">Company: ABACS </p>
+    	</button>
+    	<button type="button" class="list-group-item">
+			<p class="list-group-item-text">Name: Employer 'i' </p>
+			<p class="list-group-item-text">Company: ABACS </p>
+		</button> -->
+	</div>
+</body>	
+</html>
