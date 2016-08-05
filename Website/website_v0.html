@@ -1,0 +1,101 @@
+<!doctype html>
+<html> 
+	<head>
+		<title> Audiovert's website </title>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="style.css">
+		<!-- Shopify's Buy SDK  -->
+		<script src="http://sdks.shopifycdn.com/js-buy-sdk/latest/shopify-buy.polyfilled.globals.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+		<script src="js/shopifyjq.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script><!-- load angular -->
+	</head>
+	<body background = "images/background_img.jpg">
+		<!-- The fixed navbar -->
+		<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  			<div class="container-fluid">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button> -->
+			      <a class="navbar-brand" href="http://www.audiovert.com">
+			      	<img id="logo1" src = "images/Weblogo1.png"/>
+			      	<img id="logo2" src = "images/Weblogo2.png" />
+			      </a>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			     <!--  <ul class="nav navbar-nav">
+			        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+			        <li><a href="#">Link</a></li>
+			      </ul> -->
+			      <ul class="nav navbar-nav navbar-right">
+			        <li><a href="https://audiovert-speakers.myshopify.com/pages/about-us">About</a></li>
+			        <li><a href="https://audiovert-speakers.myshopify.com/collections/all">Product</a></li>
+			        <li><a href="#">Team</a></li>
+			        <li><a href="https://audiovert-speakers.myshopify.com/cart">Cart</a></li> <!-- Figure out how to readch to the cart -->
+			        <li><a href="#platform">Shop Now</a></li> <!-- internal link to platform or other elements-->
+			      </ul>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			</nav>
+
+			<!-- The prduct video --> 
+				<video id = "video" width="100%" autoplay loop>
+	  				<source src="10sClipsCuttingV2.mov" />
+				</video>
+			    
+	            <div class="container">
+	                <div class="t">
+	                    <div class="video-content">
+	                        <h1 class="txt">Your Customized Music Experience</h1>
+	                        <a data-scroll="shop" class="btn" href="#shop">Shop now</a>
+	                    </div>
+	                </div>
+	            </div>
+
+			<!-- The customization platform --> 
+			<iframe src="https://customization-audiovert.herokuapp.com/" width ="100%" height = "500">
+			</iframe>
+			
+			<hr>
+			
+			<!-- The other products offered --> 
+			<h1> Or Choose one of our top picks </h1>
+			<div class="product" id="product-1"></div>
+			<div class="product" id="product-2"></div>
+			<div class="product" id="product-3"></div>
+			<hr>
+			<!-- The image slider --> 
+			<div class ="myslider">
+				<center>
+					<img class="mySlides" src="images/3Room.jpg">
+					<img class="mySlides" src="images/AhrenRoom.jpg">
+					<img class="mySlides" src="images/BlueRoom.jpg">
+					<img class="mySlides" src="images/ChernoRoom.jpg">
+					<img class="mySlides" src="images/ColorfulRoom.jpg">
+					<img class="mySlides" src="images/GirlsRoom.jpg">
+					<img class="mySlides" src="images/CoupleRoom.jpg">
+					<img class="mySlides" src="images/CorkRoom.jpg">
+					<img class="mySlides" src="images/MakeupRoom.jpg">
+					<img class="mySlides" src="images/MakeupRoomV2.jpg">
+					<img class="mySlides" src="images/PirateRoom.jpg">
+					<!-- <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10094;</a>
+					<a class="w3-btn-floating" onclick="plusDivs(+1)">&#10095;</a> -->
+				</center>
+			</div>
+			<br></br>
+			<!-- The footer -->
+			<div id="footer" display = "block">	   
+		        	<p>Audiovert Inc <a href="http://martinbean.co.uk">Thanks</a>.</p>
+	    	</div>
+	</body>
+</html>
