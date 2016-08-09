@@ -1,3 +1,5 @@
+slideIndex = 1; // Defining slide index globally so as to be able to be used and modified locally!
+var curI = 1;
 $(function(){ // Another way of saying $(document).ready(function(){}) i.e when document/window DOM is ready then execute whatever exists within the function!
 	// create a shopify client
 	var client = ShopifyBuy.buildClient({
@@ -40,8 +42,6 @@ $(function(){ // Another way of saying $(document).ready(function(){}) i.e when 
 
 	// Adding elements to the shopping cart
 
-
-
 	//Displaying and removing the shopping cart
 	function openCart() {
  	 $('.cart').addClass('js-active');
@@ -50,30 +50,78 @@ $(function(){ // Another way of saying $(document).ready(function(){}) i.e when 
 	function closeCart() {
   		$('.cart .btn--close').click(function () {
     	$('.cart').removeClass('js-active');
-  	});
-}
-
-	// slider functionality 
-	var slideIndex = 0;
-	carousel();
-
-	function carousel() {
-	    var i;
-	    var x = document.getElementsByClassName("mySlides");
-	    for (i = 0; i < x.length; i++) {
-	      x[i].style.display = "none"; 
-	    }
-	    slideIndex++;
-	    if (slideIndex > x.length) {slideIndex = 1} 
-	    x[slideIndex-1].style.display = "block"; 
-	    setTimeout(carousel, 3000); // Change image every 2 seconds
+  		});
 	}
 
+	function animator(slideIndex){
+		carousel(slideIndex);}
+		// slideIndex+=1;
+		// console.log(slideIndex);
+		// setTimeout(animator,5000,slideIndex);} // calling Timeout with a parameter is different 
+		// setTimeout(animator(++slideIndex),3000);} //DOESN'T WORK
 
-
+	animator(slideIndex); // We don't just have to declare functions but also call them here to run them
 });
 
+function plusSlides(n) {
+  carousel(slideIndex+=n);
+}
+
+function currentSlide(n) {
+  carousel(slideIndex = n);
+}
+
+ 	
+function carousel(slideIndex) {
+   	var i;
+    var x = document.getElementsByClassName("mySlides");
+    var mydots = document.getElementsByClassName("dot");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none"; 
+    }
+    for (i = 0; i < mydots.length; i++) {
+  		mydots[i].className = mydots[i].className.replace(" active", "");
+	}
+    if (slideIndex > x.length) {slideIndex = slideIndex%x.length} 
+    if (slideIndex < 1) {slideIndex = x.length}
+    x[slideIndex-1].style.display = "block"; 
+	mydots[slideIndex-1].className += " active";
+}
+
+///////////////////////////////////// Existing slider - DELETED NOW
+// var slideIndex = 0;
+
+// carousel();
+
+// function carousel() {
+//     var i;
+//     var x = document.getElementsByClassName("mySlides");
+//     for (i = 0; i < x.length; i++) {
+//       x[i].style.display = "none"; 
+//     }
+//     slideIndex++;
+//     if (slideIndex > x.length) {slideIndex = 1} 
+//     x[slideIndex-1].style.display = "block"; 
+//     setTimeout(carousel, 5000); // Change image every 2 seconds
+// }
+
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("mySlides");
+//   var dots = document.getElementsByClassName("dot");
+//   if (n > slides.length) {slideIndex = 1} 
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none"; 
+//   }
+//   for (i = 0; i < dots.length; i++) {
+//       dots[i].className = dots[i].className.replace(" active", "");
+//   }
+//   slides[slideIndex-1].style.display = "block"; 
+//   dots[slideIndex-1].className += " active";
+// }
+
 // jQuery Practice 
-	// $("#video").click(function(){ 
-	// 	$(this).hide();
-	// });
+// $("#video").click(function(){ 
+// 	$(this).hide();
+// });

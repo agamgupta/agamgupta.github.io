@@ -2,16 +2,18 @@
 <html> 
 	<head>
 		<title> Audiovert's website </title>
-		
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
 		<link rel="stylesheet" href="style.css">
 		<!-- Shopify's Buy SDK  -->
-		<script src="//sdks.shopifycdn.com/js-buy-sdk/latest/shopify-buy.polyfilled.globals.min.js"></script>
+		<script src="https://sdks.shopifycdn.com/js-buy-sdk/latest/shopify-buy.polyfilled.globals.min.js"></script>
 		<!-- Latest compiled and minified JavaScript -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
 		<script src="js/shopifyjq.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script><!-- load angular -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js"></script><!-- load angular -->
+		 <!-- // <script src="sliderj.js" type="text/javascript"></script> -->
+		<!-- <link href="sliderstyle.css" rel="stylesheet" type="text/css" /> -->
+
 	</head>
 	<body background = "images/background_img.jpg">
 		<!-- The fixed navbar -->
@@ -19,12 +21,6 @@
   			<div class="container-fluid">
 			    <!-- Brand and toggle get grouped for better mobile display -->
 			    <div class="navbar-header">
-			      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
-			        <span class="sr-only">Toggle navigation</span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			        <span class="icon-bar"></span>
-			      </button> -->
 			      <a class="navbar-brand" href="http://www.audiovert.com">
 			      	<img id="logo1" src = "images/Weblogo1.jpg"/>
 			      	<img id="logo2" src = "images/Weblogo2.jpg" />
@@ -63,11 +59,9 @@
 	            </div>
 
 			<!-- The customization platform --> 
-			<iframe src="https://customization-audiovert.herokuapp.com/" width ="100%" height = "500">
-			</iframe>
-			
+			<!-- <iframe src="https://customization-audiovert.herokuapp.com/" width ="100%" height = "500">
+			</iframe> -->			
 			<hr>
-			
 			<!-- The other products offered --> 
 			<h1> Or Choose one of our top picks </h1>
 			<div class="product" id="product-1"></div>
@@ -75,27 +69,97 @@
 			<div class="product" id="product-3"></div>
 			<hr>
 			<!-- The image slider --> 
-			<div class ="myslider">
-				<center>
-					<img class="mySlides" src="images/3Room.jpg">
-					<img class="mySlides" src="images/AhrenRoom.jpg">
-					<img class="mySlides" src="images/BlueRoom.jpg">
-					<img class="mySlides" src="images/ChernoRoom.jpg">
-					<img class="mySlides" src="images/ColorfulRoom.jpg">
-					<img class="mySlides" src="images/GirlsRoom.jpg">
-					<img class="mySlides" src="images/CoupleRoom.jpg">
-					<img class="mySlides" src="images/CorkRoom.jpg">
-					<img class="mySlides" src="images/MakeupRoom.jpg">
-					<img class="mySlides" src="images/MakeupRoomV2.jpg">
-					<img class="mySlides" src="images/PirateRoom.jpg">
-					<!-- <a class="w3-btn-floating" onclick="plusDivs(-1)">&#10094;</a>
-					<a class="w3-btn-floating" onclick="plusDivs(+1)">&#10095;</a> -->
-				</center>
+
+ 		   	<div class="slideshow-container">
+			  <div class="mySlides">
+			    <div class="numbertext">1 / 11</div>
+			    <img src="images/3Room.jpg" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">2 / 11</div>
+			    <img src="images/AhrenRoom.jpg" style="width:100%">
+			    <div class="text">Caption Two</div>
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">3 / 11</div>
+			    <img src="images/BlueRoom.jpg" style="width:100%">
+			    <div class="text">Caption Three</div>
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">4 / 11</div>
+			    <img src="images/ChernoRoom.jpg" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">5 / 11</div>
+			    <img src="images/ColorfulRoom.jpg" style="width:100%">
+			    <div class="text">Caption Two</div>
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">6 / 11</div>
+			    <img src="images/GirlsRoom.jpg" style="width:100%">
+			    <div class="text">Caption Three</div>
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">7 / 11</div>
+			    <img src="images/CoupleRoom.jpg" style="width:100%">
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">8 / 11</div>
+			    <img src="images/CorkRoom.jpg" style="width:100%">
+			    <div class="text">Caption Two</div>
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">9 / 11</div>
+			    <img src="images/MakeupRoom.jpg" style="width:100%">
+			    <div class="text">Caption Three</div>
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">10 / 11</div>
+			    <img src="images/PirateRoom.jpg" style="width:100%">
+			    <div class="text">Caption Two</div>
+			  </div>
+
+			  <div class="mySlides">
+			    <div class="numbertext">11 / 11</div>
+			    <img src="images/MakeupRoom.jpg" style="width:100%">
+			    <div class="text">Caption Three</div>
+			  </div>
+			  
+			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+
+			<div style="text-align:center">
+			  <span class="dot" onclick="currentSlide(1)"></span> 
+			  <span class="dot" onclick="currentSlide(2)"></span> 
+			  <span class="dot" onclick="currentSlide(3)"></span> 
+			  <span class="dot" onclick="currentSlide(4)"></span> 
+			  <span class="dot" onclick="currentSlide(5)"></span> 
+			  <span class="dot" onclick="currentSlide(6)"></span> 
+			  <span class="dot" onclick="currentSlide(7)"></span> 
+			  <span class="dot" onclick="currentSlide(8)"></span> 
+			  <span class="dot" onclick="currentSlide(9)"></span> 
+			  <span class="dot" onclick="currentSlide(10)"></span> 
+			  <span class="dot" onclick="currentSlide(11)"></span> 
 			</div>
 			<br></br>
 			<!-- The footer -->
 			<div id="footer" display = "block">	   
-		        	<p>Audiovert Inc <a href="http://martinbean.co.uk">Thanks</a>.</p>
+		        	<p>Audiovert Inc <a href="http://www.google.com">Thanks</a>.</p>
 	    	</div>
 	</body>
 </html>
+
+<!-- 
+
+ -->
