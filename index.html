@@ -41,122 +41,140 @@
 			        <li><a href="#platform">Shop Now</a></li> <!-- internal link to platform or other elements-->
 			      </ul>
 			    </div><!-- /.navbar-collapse -->
-			  </div><!-- /.container-fluid -->
-			</nav>
+			</div><!-- /.container-fluid -->
+		</nav>
 
-			<!-- The prduct video --> 
-				<video id = "video" width="100%" autoplay loop>
-	  				<source src="10sClipsCuttingV2.mov" />
-				</video>
-			    
-	            <div class="container">
-	                <div class="t">
-	                    <div class="video-content">
-	                        <h1 class="txt">Your Customized Music Experience</h1>
-	                        <a data-scroll="shop" class="btn" href="#shop">Shop now</a>
-	                    </div>
-	                </div>
-	            </div>
+		<!-- The prduct video --> 
+		<video id = "video" width="100%" autoplay loop>
+				<source src="10sClipsCuttingV2.mov" />
+		</video>
+	    
+        <div class="container">
+            <div class="t">
+                <div class="video-content">
+                    <h1 class="txt">Your Customized Music Experience</h1>
+                    <a data-scroll="shop" class="btn" href="#shop">Shop now</a>
+                </div>
+            </div>
+        </div>
 
-			<!-- The customization platform --> 
-			<!-- <iframe src="https://customization-audiovert.herokuapp.com/" width ="100%" height = "500">
-			</iframe> -->			
-			<hr>
-			<!-- The other products offered --> 
-			<h1> Or Choose one of our top picks </h1>
-			<div class="product" id="product-1"></div>
-			<div class="product" id="product-2"></div>
-			<div class="product" id="product-3"></div>
-			<hr>
-			<!-- The image slider --> 
+		<!-- The customization platform --> 
+		<!-- <iframe src="https://customization-audiovert.herokuapp.com/" width ="100%" height = "500">
+		</iframe> -->	
+		
+		<hr id="myhr">
+		<!-- The other products offered --> 
+		<h1> Or Choose one of our top picks </h1>
+		<div class="product" id="product-2"></div> <!-- 6 quads -->
+		<div class="product" id="product-1"></div> <!-- 4 quads -->
+		<div class="product" id="product-3"></div> <!-- 2 quads -->
 
- 		   	<div class="slideshow-container">
-			  <div class="mySlides">
-			    <div class="numbertext">1 / 11</div>
-			    <img src="images/3Room.jpg" style="width:100%">
-			  </div>
+		<div id="buy_speaker">
+			<button type="button" class="btn btn-success" onclick="add2tocart()"> ADD 2 TO CART </button>
+		</div>
+		<div id="buy_speaker">
+			<button type="button" class="btn btn-success" onclick="add4tocart()"> ADD 4 TO CART </button>
+		</div>
+		<div id="buy_speaker">
+			<button type="button" class="btn btn-success" onclick="add6tocart()"> ADD 6 TO CART </button>
+		</div>
+		
+		<hr id="myhr">
 
-			  <div class="mySlides">
-			    <div class="numbertext">2 / 11</div>
-			    <img src="images/AhrenRoom.jpg" style="width:100%">
-			    <div class="text">Caption Two</div>
-			  </div>
+		<!-- The image slider --> 
 
-			  <div class="mySlides">
-			    <div class="numbertext">3 / 11</div>
-			    <img src="images/BlueRoom.jpg" style="width:100%">
-			    <div class="text">Caption Three</div>
-			  </div>
+		<div class="slideshow-container">
+			<div class="mySlides">
+		    	<div class="numbertext">1 / 11</div>
+		    	<img src="images/3Room.jpg" style="width:100%">
+		 	</div>
 
-			  <div class="mySlides">
-			    <div class="numbertext">4 / 11</div>
-			    <img src="images/ChernoRoom.jpg" style="width:100%">
-			  </div>
+			<div class="mySlides">
+		    	<div class="numbertext">2 / 11</div>
+		    	<img src="images/AhrenRoom.jpg" style="width:100%">
+		    	<div class="text">Caption Two</div>
+		  	</div>
 
-			  <div class="mySlides">
-			    <div class="numbertext">5 / 11</div>
-			    <img src="images/ColorfulRoom.jpg" style="width:100%">
-			    <div class="text">Caption Two</div>
-			  </div>
+		    <div class="mySlides">
+		    	<div class="numbertext">3 / 11</div>
+		    	<img src="images/BlueRoom.jpg" style="width:100%">
+		    	<div class="text">Caption Three</div>
+		  	</div>
 
-			  <div class="mySlides">
-			    <div class="numbertext">6 / 11</div>
-			    <img src="images/GirlsRoom.jpg" style="width:100%">
-			    <div class="text">Caption Three</div>
-			  </div>
-
-			  <div class="mySlides">
-			    <div class="numbertext">7 / 11</div>
-			    <img src="images/CoupleRoom.jpg" style="width:100%">
-			  </div>
-
-			  <div class="mySlides">
-			    <div class="numbertext">8 / 11</div>
-			    <img src="images/CorkRoom.jpg" style="width:100%">
-			    <div class="text">Caption Two</div>
-			  </div>
-
-			  <div class="mySlides">
-			    <div class="numbertext">9 / 11</div>
-			    <img src="images/MakeupRoom.jpg" style="width:100%">
-			    <div class="text">Caption Three</div>
-			  </div>
-
-			  <div class="mySlides">
-			    <div class="numbertext">10 / 11</div>
-			    <img src="images/PirateRoom.jpg" style="width:100%">
-			    <div class="text">Caption Two</div>
-			  </div>
-
-			  <div class="mySlides">
-			    <div class="numbertext">11 / 11</div>
-			    <img src="images/MakeupRoom.jpg" style="width:100%">
-			    <div class="text">Caption Three</div>
-			  </div>
-			  
-			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			<div class="mySlides">
+				<div class="numbertext">4 / 11</div>
+				<img src="images/ChernoRoom.jpg" style="width:100%">
 			</div>
-			<br>
 
-			<div style="text-align:center">
-			  <span class="dot" onclick="currentSlide(1)"></span> 
-			  <span class="dot" onclick="currentSlide(2)"></span> 
-			  <span class="dot" onclick="currentSlide(3)"></span> 
-			  <span class="dot" onclick="currentSlide(4)"></span> 
-			  <span class="dot" onclick="currentSlide(5)"></span> 
-			  <span class="dot" onclick="currentSlide(6)"></span> 
-			  <span class="dot" onclick="currentSlide(7)"></span> 
-			  <span class="dot" onclick="currentSlide(8)"></span> 
-			  <span class="dot" onclick="currentSlide(9)"></span> 
-			  <span class="dot" onclick="currentSlide(10)"></span> 
-			  <span class="dot" onclick="currentSlide(11)"></span> 
-			</div>
-			<br></br>
-			<!-- The footer -->
-			<div id="footer" display = "block">	   
-		        	<p>Audiovert Inc <a href="http://www.google.com">Thanks</a>.</p>
-	    	</div>
+		  	<div class="mySlides">
+		    	<div class="numbertext">5 / 11</div>
+		    	<img src="images/ColorfulRoom.jpg" style="width:100%">
+		    	<div class="text">Caption Two</div>
+		  	</div>
+
+		  <div class="mySlides">
+		    <div class="numbertext">6 / 11</div>
+		    <img src="images/GirlsRoom.jpg" style="width:100%">
+		    <div class="text">Caption Three</div>
+		  </div>
+
+		  <div class="mySlides">
+		    <div class="numbertext">7 / 11</div>
+		    <img src="images/CoupleRoom.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+		    <div class="numbertext">8 / 11</div>
+		    <img src="images/CorkRoom.jpg" style="width:100%">
+		    <div class="text">Caption Two</div>
+		  </div>
+
+		  <div class="mySlides">
+		    <div class="numbertext">9 / 11</div>
+		    <img src="images/MakeupRoom.jpg" style="width:100%">
+		    <div class="text">Caption Three</div>
+		  </div>
+
+		  <div class="mySlides">
+		    <div class="numbertext">10 / 11</div>
+		    <img src="images/PirateRoom.jpg" style="width:100%">
+		    <div class="text">Caption Two</div>
+		  </div>
+
+		  <div class="mySlides">
+		    <div class="numbertext">11 / 11</div>
+		    <img src="images/MakeupRoom.jpg" style="width:100%">
+		    <div class="text">Caption Three</div>
+		  </div>
+		  
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		  <span class="dot" onclick="currentSlide(4)"></span> 
+		  <span class="dot" onclick="currentSlide(5)"></span> 
+		  <span class="dot" onclick="currentSlide(6)"></span> 
+		  <span class="dot" onclick="currentSlide(7)"></span> 
+		  <span class="dot" onclick="currentSlide(8)"></span> 
+		  <span class="dot" onclick="currentSlide(9)"></span> 
+		  <span class="dot" onclick="currentSlide(10)"></span> 
+		  <span class="dot" onclick="currentSlide(11)"></span> 
+		</div>
+		<br></br>
+		<hr id="myhr">
+		<div id="mycart">
+			<iframe name= "Right" id ="myframe" src="https://audiovert-speakers.myshopify.com/cart" width ="100%" height = "300" scrolling="no">	</iframe>
+		</div>
+
+		<!-- The footer -->
+		<!-- <div id="footer" display = "block">	   
+	        <p>Audiovert Inc <a href="http://www.google.com">Thanks</a>.</p>
+    	</div> -->
 	</body>
 </html>
 
