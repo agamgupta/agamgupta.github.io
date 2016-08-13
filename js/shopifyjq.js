@@ -53,19 +53,34 @@ $(function(){ // Another way of saying $(document).ready(function(){}) i.e when 
 		// setTimeout(animator(++slideIndex),3000);} //DOESN'T WORK
 
 	animator(slideIndex); // We don't just have to declare functions but also call them here to run them
+
 });
 
-// Shopping Cart ***********************************************
-//Displaying and removing the shopping cart 
-function openCart() {
-	 $('.cart').addClass('js-active');
+function cart_refresher(){
+		var ifr = document.getElementsByName('Right')[0];
+    	ifr.src = ifr.src;
+    	setTimeout(cart_refresher,6000);
+	}
+
+function cart_refresh_stopper(){
+// If checkout button on iframe clicked then set timeout as infinity or if link of iframe is not add/cart.js
+
 }
 
-function closeCart() {
-		$('.cart .btn--close').click(function () {
-	$('.cart').removeClass('js-active');
-		});
-}
+// function clicked_checkout(){
+// 	window.top.location.href = "http://www.shopify.com/cart"; 
+// }
+// Shopping Cart ***********************************************
+//Displaying and removing the shopping cart 
+// function openCart() {
+// 	 $('.cart').addClass('js-active');
+// }
+
+// function closeCart() {
+// 		$('.cart .btn--close').click(function () {
+// 	$('.cart').removeClass('js-active');
+// 		});
+// }
 
 // CURRENT SLIDER ***********************************************
 function plusSlides(n) {
@@ -88,9 +103,7 @@ function add2tocart(){
 		 // crossdomain: true                                                                                                                                               
 	 }).done(function(x){console.log('done what now')});
 	
-	
-	var ifr = document.getElementsByName('Right')[0];
-    ifr.src = ifr.src;
+	cart_refresher();
 }	
 
 
@@ -106,8 +119,9 @@ function add4tocart(){
 		 // crossdomain: true                                                                                                                                               
 	 }).done(function(x){console.log('done what now')});
 
-	var ifr = document.getElementsByName('Right')[0];
-    ifr.src = ifr.src;
+	// var ifr = document.getElementsByName('Right')[0];
+ //    ifr.src = ifr.src;    
+ 	cart_refresher();
 }
 
 
@@ -123,8 +137,9 @@ function add6tocart(){
 		 // crossdomain: true                                                                                                                                               
 	 }).done(function(x){console.log('done what now')});
 
-	var ifr = document.getElementsByName('Right')[0];
-    ifr.src = ifr.src;
+	// var ifr = document.getElementsByName('Right')[0];
+ //    ifr.src = ifr.src;
+ 	cart_refresher();
 }
 
 function carousel(slideIndex) {
@@ -143,6 +158,10 @@ function carousel(slideIndex) {
 	mydots[slideIndex-1].className += " active";
 }
 
+function OpenNewTab(id){
+    setTimeout(function(){ window.location.href = "https://audiovert-speakers.myshopify.com/cart"}, 1000);
+
+}
 ///////////////////////////////////// Existing slider - DELETED NOW
 // var slideIndex = 0;
 
