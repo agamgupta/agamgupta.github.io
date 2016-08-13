@@ -233,7 +233,7 @@ p {
 }
 
 @media only screen and (max-device-width: 480px) {
-  #buy_speaker {
+  .product {
     width: 100%;
   }
 }
