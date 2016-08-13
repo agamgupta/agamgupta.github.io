@@ -96,7 +96,7 @@
 }
 
 #buy_speaker {
-  padding-top: 7%;
+  padding-top: 15px;
   width: 31%;
   text-align: center;
   padding-right: 10px;
@@ -230,4 +230,10 @@ p {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+@media only screen and (max-device-width: 480px) {
+  #buy_speaker {
+    width: 100%;
+  }
 }
