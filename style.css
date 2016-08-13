@@ -32,7 +32,7 @@
 
 /*For the Shopify API*/
 .product {
-  /*max-width: 30%;*/
+  max-width: 30%;
   box-shadow: 0 0 15px 5px #eee;
   padding: 30px;
   margin-right: 10px;
@@ -96,7 +96,7 @@
 }
 
 #buy_speaker {
-  padding-top: 15px;
+  padding-top: 7%;
   width: 31%;
   text-align: center;
   padding-right: 10px;
