@@ -15,15 +15,6 @@ $(function(){ // Another way of saying $(document).ready(function(){}) i.e when 
 	var product_array;
 	client.fetchQueryProducts({collection_id: 226107777})
 		.then(function(products){
-
-			// var selectedVariant = product.selectedVariant;
-			// var selectedVariantImage = product.selectedVariantImage;
-			// var currentOptions = product.options;
-			
-			//varSelectors is the html code for generating/manipulating variants in
-			// var variantSelectors = generateSelectors(product);
-			//product_array = products and then put the iterative call in another fn
-			// Iterate over the products array adding custom html code to each product element in the view
 			$.each(products,function(index,product){
 				var html = "<img class='product__image' src='" + product.selectedVariantImage.src + "' >" +
 						"<h2 class='product__title'>" + product.title + "</h2>"; //+ "<button type='button' class='btn btn-success' onclick='add2tocart()'>Hi there </button>"  ; 
@@ -41,9 +32,7 @@ $(function(){ // Another way of saying $(document).ready(function(){}) i.e when 
 
 	// $.getJSON('https://audiovert-speakers.myshopify.com/collections/frontpage/products/hexon-duo-2-speaker-modules.json?callback=?').done(function(x){console.log(x.product)})
 	// $.post('https://audiovert-speakers.myshopify.com/cart/add.js', {'quantity': '2', 'id': '17651298625'}).done(function(y){console.log('item added')})
-  	
-
-	// Slider functionality at the end of the website
+  
 
 	function animator(slideIndex){
 		carousel(slideIndex);}
@@ -67,21 +56,6 @@ function cart_refresh_stopper(){
 
 }
 
-// function clicked_checkout(){
-// 	window.top.location.href = "http://www.shopify.com/cart"; 
-// }
-// Shopping Cart ***********************************************
-//Displaying and removing the shopping cart 
-// function openCart() {
-// 	 $('.cart').addClass('js-active');
-// }
-
-// function closeCart() {
-// 		$('.cart .btn--close').click(function () {
-// 	$('.cart').removeClass('js-active');
-// 		});
-// }
-
 // CURRENT SLIDER ***********************************************
 function plusSlides(n) {
   carousel(slideIndex+=n);
@@ -97,8 +71,6 @@ function add2tocart(){
 		 url: 'https://audiovert-speakers.myshopify.com/cart/add.js?callback=?',
 		 dataType: 'json',   
 		 data: {'quantity': 1, 'id': 17651298625},                                                                                                                                                                                       
-		 // success: function() { console.log('Success!'); },                                                                                                                                                                                       
-		 // error: function() { console.log('Uh Oh!'); },
 		 jsonp: "callback"
 		 // crossdomain: true                                                                                                                                               
 	 }).done(function(x){console.log('done what now')});
@@ -119,8 +91,6 @@ function add4tocart(){
 		 // crossdomain: true                                                                                                                                               
 	 }).done(function(x){console.log('done what now')});
 
-	// var ifr = document.getElementsByName('Right')[0];
- //    ifr.src = ifr.src;    
  	cart_refresher();
 }
 
@@ -137,8 +107,6 @@ function add6tocart(){
 		 // crossdomain: true                                                                                                                                               
 	 }).done(function(x){console.log('done what now')});
 
-	// var ifr = document.getElementsByName('Right')[0];
- //    ifr.src = ifr.src;
  	cart_refresher();
 }
 

@@ -32,10 +32,9 @@
 
 /*For the Shopify API*/
 .product {
-  max-width: 30%;
+  /*max-width: 30%;*/
   box-shadow: 0 0 15px 5px #eee;
   padding: 30px;
-  /*max-height: 20%;*/
   margin-right: 10px;
   display: inline-block;
 }
