@@ -130,6 +130,22 @@ function OpenNewTab(id){
     setTimeout(function(){ window.location.href = "https://audiovert-speakers.myshopify.com/cart"}, 1000);
 
 }
+
+// $(document).ready(function(){
+// 	$("#cp").change(function(){
+// 		$("myrect").style.background = $("#cp").val();
+// 		// $("myrect").css("background-color",$("#cp").val());
+// 	});
+// });
+
+function fillit(){
+	// $(this).toggleClass('selected');
+	var x =document.getElementsByClassName("hex");
+	x[0].style.backgroundColor = $("#cp").val();
+	// document.getElementsByClassName("myrect").style.backgroundColor = $("#cp").val();
+}
+
+
 ///////////////////////////////////// Existing slider - DELETED NOW
 // var slideIndex = 0;
 
