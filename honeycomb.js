@@ -1,25 +1,29 @@
 // Don't call JS functions such as onclick etc from html! 
+var imgclicked;
+var myurl;
+
 $(document).ready(function(){
 	var i = 1;
-	// $(".theme").on('click', function(){
-	// 	console.log('Hi I was clicked');
-	// });
 
 	$(".hexIn").on('click', function(){
+		
 		// $(this).css("border","url(" + $(".myimage")[0].src + ")");
-		$(this).css("backgroundColor", $("#cp").val());
+		// $(this).css("backgroundColor", $("#cp").val());
 		// $(this).css("background-image","url(" + $(".myimage")[0].src + ")");
 		// clickedflag = false;
 		$(this).toggleClass(i + "selected");
 		console.log(this.className);
-		
-		$(".myimage").on('click', function(){
-			$(this).toggleClass("secpic");
-			clickedflag = true;
-			myurl = $(".myimage.secpic").attr('src');
-			console.log(myurl);
-			$(".hexIn"+ (i-1) +"selected").css("background-image","url(" + $(".myimage")[0].src + ")"); //css("background-image", "url(images/CorkRoom.jpg)");
-		})
+		if (imgclicked == true){
+			$(this).css("background-image","url(" + myurl + ")");
+		}
+		else {$(this).css("backgroundColor", $("#cp").val());}
+		// $(".myimage").on('click', function(){
+		// 	$(this).toggleClass("secpic");
+		// 	clickedflag = true;
+		// 	myurl = $(".myimage.secpic").attr('src');
+		// 	console.log(myurl);
+		// 	$(".hexIn"+ (i-1) +"selected").css("background-image","url(" + $(".myimage")[0].src + ")"); //css("background-image", "url(images/CorkRoom.jpg)");
+		// })
 
 		// $("#cp").on('click',function(){
 		// 	$(".hexIn."+ (i-1) +"selected").css('backgroundColor', $("#cp").val());
@@ -39,8 +43,21 @@ $(document).ready(function(){
 		i = i+ 1;
 		
 	})
+	var j=1;
+	$(".myimage").on('click', function(){
+		$(this).toggleClass("secpic" + j);
+		imgclicked = true;
+		myurl = $(".myimage.secpic" + j).attr('src');
+		console.log(myurl);
+		console.log(this.className);
+		j=j+1;
+		// $(".hexIn"+ (i-1) +"selected").css("background-image","url(" + $(".myimage")[0].src + ")"); //css("background-image", "url(images/CorkRoom.jpg)");
+	})
 
-	// showcolors();
+	$(".theme").on('click',function(){
+		imgclicked = false;
+		console.log('col click')
+	})
 });
 
 function showcolors(){
@@ -48,6 +65,7 @@ function showcolors(){
 		console.log("the index is " + j + " and the color is " + currhex.style.backgroundColor)
 	})
 }
+
 // function addmyClass(){
 // 	// $(this).attr('id','selected');
 // 	$(this).addClass("selected");
