@@ -16,7 +16,9 @@ $(document).ready(function(){
 		if (imgclicked == true){
 			$(this).css("background-image","url(" + myurl + ")");
 		}
-		else {$(this).css("backgroundColor", $("#cp").val());}
+		else {
+			$(this).css("background-image", "none");
+			$(this).css("backgroundColor", $("#cp").val());}
 		// $(".myimage").on('click', function(){
 		// 	$(this).toggleClass("secpic");
 		// 	clickedflag = true;
